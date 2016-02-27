@@ -1,5 +1,7 @@
 # hubot-lmgtfy
 
+[![Build Status](https://travis-ci.org/MonicaG/hubot-lmgtfy.svg?branch=master)](https://travis-ci.org/MonicaG/hubot-lmgtfy)
+
 A hubot script that replies with a link to [lmgtfy](http://lmgtfy.com/) (let me google that for you)  
 
 See [`src/lmgtfy.coffee`](src/lmgtfy.coffee) for full documentation.
