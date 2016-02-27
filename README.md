@@ -1,6 +1,6 @@
 # hubot-lmgtfy
 
-Replies with a link to lmgtfy (let me google that for you)  
+A hubot script that replies with a link to [lmgtfy](http://lmgtfy.com/) (let me google that for you)  
 
 See [`src/lmgtfy.coffee`](src/lmgtfy.coffee) for full documentation.
 
@@ -21,6 +21,6 @@ Then add **hubot-lmgtfy** to your `external-scripts.json`:
 ## Sample Interaction
 
 ```
-user1>> hubot hello
-hubot>> hello!
+user1>> hubot lmgtfy what is 2+2?
+hubot>> http://lmgtfy.com/?q=what%20is%202%2B2%3F
 ```

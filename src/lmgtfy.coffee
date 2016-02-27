@@ -1,22 +1,21 @@
 # Description
-#   Replies with a link to lmgtfy (let me google that for you)  
+#   A hubot script that replies with a link to http://lmgtfy.com/ (let me google that for you)
 #
 # Configuration:
-#   LIST_OF_ENV_VARS_TO_SET
+#   None
 #
 # Commands:
-#   hubot hello - <what the respond trigger does>
-#   orly - <what the hear trigger does>
+#   hubot lmgtfy <query> - responds with a 'let me google that for you' link: http://lmgtfy.com/?q=query
 #
 # Notes:
-#   <optional notes required for the script>
+#   None
 #
 # Author:
 #   Monica Granbois <mgranbois@outlook.com>
 
 module.exports = (robot) ->
-  robot.respond /hello/, (res) ->
-    res.reply "hello!"
+  robot.respond /lmgtfy (.*)/i, (res) ->
+    topic = encodeURIComponent(res.match[1]).replace(/[!'()*]/g, escape)
+    res.send "http://lmgtfy.com/?q=#{topic}"
 
-  robot.hear /orly/, ->
-    res.send "yarly"
+

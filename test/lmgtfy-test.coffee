@@ -1,19 +1,20 @@
+Helper = require 'hubot-test-helper'
+helper = new Helper('../src/lmgtfy.coffee')
 chai = require 'chai'
-sinon = require 'sinon'
-chai.use require 'sinon-chai'
-
 expect = chai.expect
 
-describe 'lmgtfy', ->
-  beforeEach ->
-    @robot =
-      respond: sinon.spy()
-      hear: sinon.spy()
 
-    require('../src/lmgtfy')(@robot)
+beforeEach ->
+  @room = helper.createRoom()
 
-  it 'registers a respond listener', ->
-    expect(@robot.respond).to.have.been.calledWith(/hello/)
+afterEach ->
+  @room.destroy()
 
-  it 'registers a hear listener', ->
-    expect(@robot.hear).to.have.been.calledWith(/orly/)
+context 'hubot responds to lmgtfy', ->
+  it 'will encode text', ->
+    @room.user.say('jane', 'hubot lmgtfy where is Côte d\'Ivoire?').then =>
+      expect(@room.messages).to.eql [
+        ['jane', 'hubot lmgtfy where is Côte d\'Ivoire?']
+        ['hubot', 'http://lmgtfy.com/?q=where%20is%20C%C3%B4te%20d%27Ivoire%3F']
+      ]
+
