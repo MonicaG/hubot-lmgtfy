@@ -1,7 +1,7 @@
 {
   "name": "hubot-lmgtfy",
   "description": "A hubot script that replies with a link to lmgtfy (let me google that for you)",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "author": "Monica Granbois <mgranbois@outlook.com>",
   "license": "MIT",
   "keywords": "hubot, hubot-scripts",
@@ -23,7 +23,7 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-mocha-test": "~0.12.7",
     "grunt-release": "~0.11.0",
-    "hubot": "2.x",
+    "hubot": "3.x",
     "hubot-test-helper": "^1.4.4",
     "matchdep": "~0.3.0",
     "mocha": "^2.1.0"
