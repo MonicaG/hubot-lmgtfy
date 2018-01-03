@@ -1,29 +1,28 @@
-/*
- * decaffeinate suggestions:
- * DS102: Remove unnecessary code created because of implicit returns
- * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
- */
 const Helper = require('hubot-test-helper');
 const helper = new Helper('../src/lmgtfy.js');
-const chai = require('chai');
-const { expect } = chai;
+const co = require('co')
+const expect = require('chai').expect;
 
+describe('lmgtfy', function() {
+  beforeEach(function() {
+    this.room = helper.createRoom();
+  });
+  afterEach(function() {
+    this.room.destroy();
+  });
 
-beforeEach(function() {
-  return this.room = helper.createRoom();
-});
+  context('hubot responds to lmgtfy', function() {
+    beforeEach(function() {
+      return co(function*() {
+        yield this.room.user.say('jane', 'hubot lmgtfy where is Côte d\'Ivoire?');
+      }.bind(this));
+    });
 
-afterEach(function() {
-  return this.room.destroy();
-});
-
-context('hubot responds to lmgtfy', () =>
-  it('will encode text', function() {
-    return this.room.user.say('jane', 'hubot lmgtfy where is Côte d\'Ivoire?').then(() => {
-      return expect(this.room.messages).to.eql([
+    it('will encode text', function() {
+      expect(this.room.messages).to.eql([
         ['jane', 'hubot lmgtfy where is Côte d\'Ivoire?'],
         ['hubot', 'http://lmgtfy.com/?q=where%20is%20C%C3%B4te%20d%27Ivoire%3F']
       ]);
+    });
   });
-})
-);
+});
