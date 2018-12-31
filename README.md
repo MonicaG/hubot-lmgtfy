@@ -4,7 +4,7 @@
 
 A hubot script that replies with a link to [lmgtfy](http://lmgtfy.com/) (let me google that for you)  
 
-See [`src/lmgtfy.coffee`](src/lmgtfy.coffee) for full documentation.
+See [`src/lmgtfy.js`](src/lmgtfy.coffee) for full documentation.
 
 ## Installation
 
