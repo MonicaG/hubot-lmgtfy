@@ -1,7 +1,7 @@
 {
   "name": "hubot-lmgtfy",
   "description": "A hubot script that replies with a link to lmgtfy (let me google that for you)",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Monica Granbois <mgranbois@outlook.com>",
   "license": "MIT",
   "keywords": "hubot, hubot-scripts",
