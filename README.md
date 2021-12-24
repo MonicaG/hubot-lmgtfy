@@ -1,6 +1,6 @@
 # hubot-lmgtfy
 
-[![Build Status](https://travis-ci.org/MonicaG/hubot-lmgtfy.svg?branch=master)](https://travis-ci.org/MonicaG/hubot-lmgtfy)
+[![Build Status](https://github.com/MonicaG/hubot-lmgtfy/actions/workflows/test.yml/badge.svg)](https://github.com/MonicaG/hubot-lmgtfy/actions/workflows/test.yml)
 
 A hubot script that replies with a link to [lmgtfy](http://lmgtfy.com/) (let me google that for you)  
 
