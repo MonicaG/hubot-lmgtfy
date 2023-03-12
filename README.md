@@ -1,3 +1,7 @@
+# ARCHIVED
+
+This repo is archived and no longer maintained as of March 12, 2023.
+
 # hubot-lmgtfy
 
 [![Build Status](https://github.com/MonicaG/hubot-lmgtfy/actions/workflows/test.yml/badge.svg)](https://github.com/MonicaG/hubot-lmgtfy/actions/workflows/test.yml)
